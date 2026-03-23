@@ -91,9 +91,6 @@
       padding: 22px 28px 28px;
     }
 
-    .section {
-      background: #ffffff;
-    }
     .section h3 {
       margin: 0 0 12px;
       padding-bottom: 8px;
@@ -104,7 +101,7 @@
     .section p { margin: 0 0 10px; }
     .muted { color: #475569; }       /* slate-600 */
 
-    /* --------- Listas “timeline” --------- */
+    /* --------- Listas tipo “timeline” --------- */
     .item {
       position: relative;
       margin: 0 0 16px 0;
@@ -156,7 +153,7 @@
       border: 1px solid #e0e7ff;
     }
 
-    /* --------- Footer pequeño --------- */
+    /* --------- Footer --------- */
     .footer {
       padding: 10px 28px 20px;
       color: #64748b;
@@ -189,11 +186,9 @@
       <!-- Encabezado con foto -->
       <div class="header">
         <div class="photo">
-          <!-- 📷 Cambia esta URL por tu propia foto -->
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&autot=crop
-        </div>
-
-        <div class="headline">
+          <!-- 📷 Cambia esta URL por tu propia foto o usa un archivo local: img/foto.jpg -->
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"
+               alt="Foto de perfil de Abner Joel Gómez Aranajpg" alt="Foto de perfil de Abner Joellass="headline">
           <h1>Abner Joel Gómez Arana</h1>
           <p class="role">Asistente Administrativo • Técnico en Desarrollo de Software (en curso)</p>
           <div class="tags">
@@ -230,21 +225,82 @@
                 <li>Gestión de inventario, pedidos de suministros y elaboración de reportes.</li>
               </ul>
             </div>
-          </section>
 
-          <section class="section" style="margin-top:18px;">
-            <h3>Formación Académica</h3>
             <div class="item">
-              <h4>Técnico en Desarrollo de Software</h4>
-              <p class="sub"><strong>Universidad Galileo</strong> · Primer ciclo</p>
+              <h4>Digitador de Inventarios</h4>
+              <p class="sub"><strong>Distribuidora del Atlántico, S.A.</strong> · Septiembre 2021 – Septiembre 2022</p>
+              <ul class="muted">
+                <li>Ingreso de facturas al sistema SPC y control de autoconsumos.</li>
+                <li>Manejo de archivo y soporte a operaciones.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h4>Asistente Administrativo / Jefe de Bodega</h4>
+              <p class="sub"><strong>Administradora de Negocios, S.A.</strong> · Junio 2013 – Abril 2021</p>
+              <ul class="muted">
+                <li>Rutas de distribución, logística de despachos y facturación.</li>
+                <li>Supervisión de reportes diarios, cuentas por pagar/cobrar, planilla y caja chica.</li>
+                <li>Negociación con proveedores, soporte en importaciones y exportaciones.</li>
+              </ul>
             </div>
           </section>
+
+          <!-- ===== Formación Académica (ACTUALIZADA) ===== -->
+          <section class="section" style="margin-top:18px;">
+            <h3>Formación Académica</h3>
+
+            <div class="item">
+              <h4>Técnico en Desarrollo de Software</h4>
+              <p class="sub"><strong>Universidad Galileo</strong></p>
+              <p class="muted">Cursando 1er. ciclo</p>
+            </div>
+
+            <div class="item">
+              <p class="sub muted">2025</p>
+              <h4>Técnico en Administración de Negocios</h4>
+              <p class="sub"><strong>Universidad Panamericana</strong></p>
+            </div>
+
+            <div class="item">
+              <h4>Bachiller en Ciencias y Letras</h4>
+              <p class="sub"><strong>Instituto Superior de Educación a Distancia “La Escuela en su Casa”</strong></p>
+              <p class="muted">Noviembre 2020</p>
+            </div>
+
+            <div class="item">
+              <h4>Perito Contador con Orientación en Computación</h4>
+              <p class="sub"><strong>Liceo Mixto en Computación “Montelimar”</strong></p>
+              <p class="muted">Noviembre 2010</p>
+            </div>
+          </section>
+          <!-- ===== /Formación Académica ===== -->
 
           <section class="section" style="margin-top:18px;">
             <h3>Formación Complementaria</h3>
             <div class="item">
               <h4>Análisis de Datos con Microsoft</h4>
               <p class="sub"><strong>INTECAP</strong> · 2025</p>
+            </div>
+            <div class="item">
+              <h4>Gestión de Datos con Excel</h4>
+              <p class="sub"><strong>CAMCOP</strong> · 2025</p>
+            </div>
+            <div class="item">
+              <h4>White Belt Lean Six Sigma</h4>
+              <p class="sub"><strong>Escuela de Negocios Alto Nivel</strong> · 2023</p>
+            </div>
+            <div class="item">
+              <h4>Administración Financiera I & II para Pequeña Empresa</h4>
+              <p class="sub"><strong>INTECAP</strong> · 2021</p>
+            </div>
+            <div class="item">
+              <h4>Blindaje y Seguridad Aplicada a Redes Digitales</h4>
+              <p class="sub"><strong>BM Computación</strong> · 2016</p>
+            </div>
+            <div class="item">
+              <h4>Técnico en Informática</h4>
+              <p class="sub"><strong>Instituto Tecnológico “Henry Ford”</strong> · 2016</p>
             </div>
           </section>
         </div>
@@ -254,8 +310,9 @@
           <div class="card-side">
             <h3 style="margin-top:0">Contacto</h3>
             <p class="kv"><strong>Correo:</strong> 26001790@galileo.edu</p>
-            <p class="kv"><strong>Teléfono:</strong> +508 3333-3333-1234</p>
+            <p class="kv"><strong>Teléfono:</strong> +502 3139-0175 / +502 3811-6586</p>
             <p class="kv"><strong>Ubicación:</strong> Guatemala</p>
+            <p class="kv"><strong>Domicilio:</strong> Lote 57 manzana “J”, sector 9, Villa Hermosa 1, zona 7, San Miguel Petapa</p>
           </div>
 
           <div class="card-side" style="margin-top:18px;">
@@ -265,13 +322,17 @@
             <span class="pill">Microsoft 365</span>
             <span class="pill">Análisis de datos</span>
             <span class="pill">Atención al detalle</span>
+            <span class="pill">Mejora continua</span>
+            <span class="pill">Automatización</span>
           </div>
 
           <div class="card-side" style="margin-top:18px;">
-            <h3 style="margin-top:0">Intereses</h3>
-            <span class="pill">Automatización</span>
-            <span class="pill">Aprendizaje</span>
+            <h3 style="margin-top:0">Idiomas e Intereses</h3>
+            <span class="pill">Inglés</span>
+            <span class="pill">Finanzas</span>
             <span class="pill">Tecnología</span>
+            <span class="pill">Correr</span>
+            <span class="pill">Dibujo</span>
           </div>
         </aside>
       </div>

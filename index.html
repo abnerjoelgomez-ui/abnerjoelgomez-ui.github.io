@@ -1,39 +1,290 @@
+
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <Title>Abner Joel Gómez Arana</Title>
-    <body>
-        <H1>Curriculum Vitae</H1>
-        <H2>Perfil</H2>
-        Asistente Administrativo con un carácter cordial y agradable siempre. 
-        Capacidad de resolución de conflictos. Fomento del trabajo en equipo,
-        siendo especialmente sensible a las necesidades de los colaboradores. 
-        Solución rápida de problemas y gran capacidad multitarea. Historial probado
-        de ser una parte esencial del equipo de gestión y contribuir decisivamente 
-        proporcionando soluciones efectivas que producen un impacto inmediato y 
-        contibuyen al éxito a largo plazo del establecimiento.
-        <H3>Datos Personales:</H3>
-        <H5>Nombre:</H5> Abner Joel Gómez Arana
-        <H5>Correo Electrónico:</H5> 26001790@galileo.edu
-        <h5>Teléfono:</h5> +508 3333-3333-1234
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV - Abner Joel Gómez Arana</title>
 
-        <H3>Experiencia Laboral</H3>
-          <h5>Auxiliar de Getente de Producción</h5>
-          <h5>Bio Papama, S.A.</h5>
-          Septiembre 2022 - Actualmente
-          Mejora del rendimiento del personal mediante formación,
-          métodos empáticos de resolución de problemas. Ayuda en la preparación 
-          de las evaluaciones del personal. Resolución de conflictos entre personal 
-          de forma amable y profesional. Inventario y pedidos de suministros. 
-          Elaboración de reportería. 
-        
-          <H3>Formación Académica</H3>
-          <h5>Universidad Galileo</h5>
-          <h5>Técnico en Desarrollo de Software</h5>
-          Cursando el primer ciclo
+  <style>
+    /* --------- Reset básico --------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      color: #1f2937;                /* gris-900 */
+      background: #f8fafc;           /* slate-50 */
+      line-height: 1.6;
+    }
 
-          <H3>Formación Complementaria</H3>
-          <H5>INTECAP</H5>
-          <H5>Análisis de Datos con Microsoft</H5>, Año 2025
+    /* --------- Contenedor --------- */
+    .page {
+      max-width: 980px;
+      margin: 32px auto;
+      padding: 24px;
+    }
 
-    </body>
+    /* --------- Card principal --------- */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* --------- Header con foto --------- */
+    .header {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 24px;
+      padding: 28px 28px 8px;
+      align-items: center;
+      background: linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%); /* azul->verde */
+      color: #fff;
+    }
+    .photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.7);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      background: #fff;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .headline h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .headline p.role {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+    .headline .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+      backdrop-filter: blur(2px);
+    }
+
+    /* --------- Body --------- */
+    .body {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      padding: 22px 28px 28px;
+    }
+
+    .section {
+      background: #ffffff;
+    }
+    .section h3 {
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5e7eb;
+      font-size: 1.1rem;
+      color: #0f172a; /* slate-900 */
+    }
+    .section p { margin: 0 0 10px; }
+    .muted { color: #475569; }       /* slate-600 */
+
+    /* --------- Listas “timeline” --------- */
+    .item {
+      position: relative;
+      margin: 0 0 16px 0;
+      padding-left: 18px;
+    }
+    .item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0ea5e9; /* azul */
+      box-shadow: 0 0 0 3px rgba(14,165,233,0.2);
+    }
+    .item h4 {
+      margin: 0 0 2px;
+      font-size: 1rem;
+    }
+    .item .sub {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .item ul {
+      margin: 0 0 0 16px;
+      padding: 0;
+    }
+    .item li { margin-bottom: 6px; }
+
+    /* --------- Tarjeta lateral --------- */
+    .card-side {
+      padding: 14px 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #f9fafb;
+    }
+    .kv { margin: 8px 0; }
+    .kv strong { display: inline-block; width: 130px; color: #0f172a; }
+    .pill {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin: 4px 6px 0 0;
+      font-size: 0.9rem;
+      border: 1px solid #e0e7ff;
+    }
+
+    /* --------- Footer pequeño --------- */
+    .footer {
+      padding: 10px 28px 20px;
+      color: #64748b;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* --------- Responsive --------- */
+    @media (max-width: 860px) {
+      .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 18px;
+      }
+      .photo {
+        margin: 0 auto;
+        width: 140px; height: 140px;
+      }
+      .body {
+        grid-template-columns: 1fr;
+      }
+      .kv strong { width: 120px; }
+    }
+  </style>
 </head>
+
+<body>
+  <main class="page">
+    <section class="card">
+      <!-- Encabezado con foto -->
+      <div class="header">
+        <div class="photo">
+          <!-- 📷 Cambia esta URL por tu propia foto -->
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&autot=crop
+        </div>
+
+        <div class="headline">
+          <h1>Abner Joel Gómez Arana</h1>
+          <p class="role">Asistente Administrativo • Técnico en Desarrollo de Software (en curso)</p>
+          <div class="tags">
+            <span class="tag">Trabajo en equipo</span>
+            <span class="tag">Resolución de problemas</span>
+            <span class="tag">Gestión y reportería</span>
+            <span class="tag">Aprendizaje continuo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="body">
+        <!-- Columna principal -->
+        <div>
+          <section class="section">
+            <h3>Perfil</h3>
+            <p class="muted">
+              Asistente Administrativo con carácter cordial y enfoque en servicio.
+              Experiencia en resolución de conflictos, coordinación de actividades y soporte a la gestión.
+              Capacidad multitarea y orientación a resultados, aportando soluciones con impacto inmediato y sostenido.
+            </p>
+          </section>
+
+          <section class="section" style="margin-top:18px;">
+            <h3>Experiencia Laboral</h3>
+
+            <div class="item">
+              <h4>Auxiliar de Gerente de Producción</h4>
+              <p class="sub"><strong>Bio Papama, S.A.</strong> · Septiembre 2022 – Actualidad</p>
+              <ul class="muted">
+                <li>Mejora del rendimiento del personal mediante formación y acompañamiento.</li>
+                <li>Resolución empática de conflictos y apoyo en evaluaciones de desempeño.</li>
+                <li>Gestión de inventario, pedidos de suministros y elaboración de reportes.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section" style="margin-top:18px;">
+            <h3>Formación Académica</h3>
+            <div class="item">
+              <h4>Técnico en Desarrollo de Software</h4>
+              <p class="sub"><strong>Universidad Galileo</strong> · Primer ciclo</p>
+            </div>
+          </section>
+
+          <section class="section" style="margin-top:18px;">
+            <h3>Formación Complementaria</h3>
+            <div class="item">
+              <h4>Análisis de Datos con Microsoft</h4>
+              <p class="sub"><strong>INTECAP</strong> · 2025</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Columna lateral -->
+        <aside>
+          <div class="card-side">
+            <h3 style="margin-top:0">Contacto</h3>
+            <p class="kv"><strong>Correo:</strong> 26001790@galileo.edu</p>
+            <p class="kv"><strong>Teléfono:</strong> +508 3333-3333-1234</p>
+            <p class="kv"><strong>Ubicación:</strong> Guatemala</p>
+          </div>
+
+          <div class="card-side" style="margin-top:18px;">
+            <h3 style="margin-top:0">Habilidades</h3>
+            <span class="pill">Comunicación</span>
+            <span class="pill">Organización</span>
+            <span class="pill">Microsoft 365</span>
+            <span class="pill">Análisis de datos</span>
+            <span class="pill">Atención al detalle</span>
+          </div>
+
+          <div class="card-side" style="margin-top:18px;">
+            <h3 style="margin-top:0">Intereses</h3>
+            <span class="pill">Automatización</span>
+            <span class="pill">Aprendizaje</span>
+            <span class="pill">Tecnología</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="footer">
+        © <span id="y"></span> Abner Joel Gómez Arana · CV
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Coloca el año actual automáticamente
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
